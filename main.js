@@ -29,6 +29,15 @@ players.forEach(player => {
     currentAudio = audio;
     audio.play();
   };
+
+  // Changing the selected class when user clicks on play button
+  audio.onplay = () =>{
+    // Remove 'selected' class from all players
+    players.forEach(p => p.classList.remove('selected'));
+
+    // Add 'selected' class to the clicked player
+    player.classList.add('selected');
+  }
 });
 
 // Set timestamp button event
