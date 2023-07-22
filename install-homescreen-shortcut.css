@@ -1,0 +1,15 @@
+#installAppButton {
+    padding: 10px 15px;
+    background-color: #06d6a0;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#installAppButton:hover {
+    background-color: #02564c;
+}

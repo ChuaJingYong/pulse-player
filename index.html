@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse Player</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8669/8669730.png ">
+    <link rel="stylesheet" href="install-homescreen-shortcut.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8669/8669730.png">
+    <script src="https://kit.fontawesome.com/2e4784bf23.js" crossorigin="anonymous"></script>
     <script src="main.js" defer></script>
     <script src="install-homescreen-shortcut.js" defer></script>
 </head>
 <body>
-    <button id="installButton" style="display: none;">Install App</button>
+    <button id="installAppButton" style="display: none;">Add to Home Screen</button>
     <div class="title">
         <img class="icon" src="https://cdn-icons-png.flaticon.com/512/8669/8669730.png" alt="pusle icon">
-        <h1>Pulse Player v2</h1>
+        <h1>Pulse Player v1</h1>
     </div>
     <div class="controls">
         <button id="play">Play</button>
         <button id="pause">Pause</button>
-        <button id="forward">Forward 5s</button>
-        <button id="backward">Backward 5s</button>
+        <button id="backward">
+            <i class="fa-solid fa-backward"></i>
+            <span>5s</span>
+        </button>
+        <button id="forward">
+            <i class="fa-solid fa-forward"></i> 
+            <span>5s</span>
+        </button>
     </div>
     <div class="timestamp-controls">
         <input id="timestamp" type="number" min="0" placeholder="Enter timestamp" />
