@@ -1,5 +1,7 @@
 let currentAudio = null; // reference to the currently playing audio
 const players = Array.from(document.querySelectorAll('.player')); // get all player divs
+
+// Set the first audio as default audio
 currentAudio = players[0].querySelector('audio')
 console.log({currentAudio})
 
