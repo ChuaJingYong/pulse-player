@@ -66,3 +66,13 @@ input[type="number"] {
 input[type="number"]:focus {
     outline: none;
 }
+
+input[type="number"]::placeholder {
+    color: #06d6a0;
+}
+
+#setTimestamp{
+    background-color: #e6ffe9;
+    color: #06d6a0;
+    border: 2px solid #22577a;
+}
