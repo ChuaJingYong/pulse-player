@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulse Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8669/8669730.png ">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="title">
+        <img class="icon" src="https://cdn-icons-png.flaticon.com/512/8669/8669730.png" alt="pusle icon">
+        <h1>Pulse Player</h1>
+    </div>
+    <div class="controls">
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="forward">Forward 5s</button>
+        <button id="backward">Backward 5s</button>
+    </div>
+    <div class="timestamp-controls">
+        <input id="timestamp" type="number" min="0" placeholder="Enter timestamp" />
+        <button id="setTimestamp">Go to timestamp</button>
+    </div>
+    <div class="player" id="player1">
+        <audio preload="metadata" controls>
+            <source src="./assets/01.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div class="player" id="player2">
+        <audio preload="metadata" controls>
+            <source src="./assets/02.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    <div class="player" id="player3">
+        <audio preload="metadata" controls>
+            <source src="./assets/03.mp3" type="audio/mp3">
+        </audio>
+    </div>
+    
+</body>
+</html>
