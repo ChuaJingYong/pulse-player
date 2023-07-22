@@ -32,11 +32,17 @@ players.forEach(player => {
 
   // Changing the selected class when user clicks on play button
   audio.onplay = () =>{
+    console.log({audio})
     // Remove 'selected' class from all players
     players.forEach(p => p.classList.remove('selected'));
 
     // Add 'selected' class to the clicked player
     player.classList.add('selected');
+
+    if(currentAudio == audio) return // prevent the code from going into infinite loop
+    if (currentAudio) currentAudio.pause();
+    currentAudio = audio;
+    audio.play();
   }
 });
 
