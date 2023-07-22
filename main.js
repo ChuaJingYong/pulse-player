@@ -47,52 +47,52 @@ document.getElementById('backward').onclick = () => {
   if (currentAudio) currentAudio.currentTime -= 5;
 };
 
-// Integrating Media Session API to allow the audio to play in the background
-if ('mediaSession' in navigator) {
+//// Integrating Media Session API to allow the audio to play in the background
+//if ('mediaSession' in navigator) {
 
-    // Event listener to update Media Session metadata when an audio element is clicked
-    audios.forEach(audio => {
-      audio.addEventListener('click', () => {
-        navigator.mediaSession.metadata = new MediaMetadata({
-          title: `Track ${audio.id}`,
-          artist: 'Unknown Artist',
-          album: 'Pulse Player Album',
-          artwork: [
-            { src: 'https://path/to/album-art-small.jpg',  sizes: '96x96',   type: 'image/jpg' },
-            { src: 'https://path/to/album-art-large.jpg',  sizes: '256x256', type: 'image/jpg' },
-          ]
-        });
-      });
-    });
+//    // Event listener to update Media Session metadata when an audio element is clicked
+//    audios.forEach(audio => {
+//      audio.addEventListener('click', () => {
+//        navigator.mediaSession.metadata = new MediaMetadata({
+//          title: `Track ${audio.id}`,
+//          artist: 'Unknown Artist',
+//          album: 'Pulse Player Album',
+//          artwork: [
+//            { src: 'https://path/to/album-art-small.jpg',  sizes: '96x96',   type: 'image/jpg' },
+//            { src: 'https://path/to/album-art-large.jpg',  sizes: '256x256', type: 'image/jpg' },
+//          ]
+//        });
+//      });
+//    });
   
-    // Media Session Action Handlers
-    navigator.mediaSession.setActionHandler('play', function() {  
-      currentAudio.play();
-      navigator.mediaSession.playbackState = "playing";
-    });
+//    // Media Session Action Handlers
+//    navigator.mediaSession.setActionHandler('play', function() {  
+//      currentAudio.play();
+//      navigator.mediaSession.playbackState = "playing";
+//    });
   
-    navigator.mediaSession.setActionHandler('pause', function() {  
-      currentAudio.pause();
-      navigator.mediaSession.playbackState = "paused";
-    });
+//    navigator.mediaSession.setActionHandler('pause', function() {  
+//      currentAudio.pause();
+//      navigator.mediaSession.playbackState = "paused";
+//    });
   
-    navigator.mediaSession.setActionHandler('seekbackward', function() { 
-      currentAudio.currentTime = Math.max(currentAudio.currentTime - 5, 0);
-    });
+//    navigator.mediaSession.setActionHandler('seekbackward', function() { 
+//      currentAudio.currentTime = Math.max(currentAudio.currentTime - 5, 0);
+//    });
   
-    navigator.mediaSession.setActionHandler('seekforward', function() { 
-      currentAudio.currentTime = Math.min(currentAudio.currentTime + 5, currentAudio.duration);
-    });
+//    navigator.mediaSession.setActionHandler('seekforward', function() { 
+//      currentAudio.currentTime = Math.min(currentAudio.currentTime + 5, currentAudio.duration);
+//    });
   
-    // Note: As of September 2021, the 'previoustrack' and 'nexttrack' handlers are not widely supported
-    // navigator.mediaSession.setActionHandler('previoustrack', function() {
-    //   // Logic to select and play the previous track
-    // });
+//    // Note: As of September 2021, the 'previoustrack' and 'nexttrack' handlers are not widely supported
+//    // navigator.mediaSession.setActionHandler('previoustrack', function() {
+//    //   // Logic to select and play the previous track
+//    // });
   
-    // navigator.mediaSession.setActionHandler('nexttrack', function() {
-    //   // Logic to select and play the next track
-    // });
+//    // navigator.mediaSession.setActionHandler('nexttrack', function() {
+//    //   // Logic to select and play the next track
+//    // });
   
-  } else {
-    console.log("Media Session API not supported in this browser");
-  }
+//  } else {
+//    console.log("Media Session API not supported in this browser");
+//  }
