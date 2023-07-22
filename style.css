@@ -37,7 +37,7 @@ audio {
 }
 
 button {
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 10px;
     background-color: #06d6a0;
     border: 2px solid #22577a;

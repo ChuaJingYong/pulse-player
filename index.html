@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pulse Player</title>
+    <link rel="manifest" href="manifest.json" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="install-homescreen-shortcut.css">
     <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8669/8669730.png">
@@ -12,7 +13,11 @@
     <script src="install-homescreen-shortcut.js" defer></script>
 </head>
 <body>
-    <button id="installAppButton" style="display: none;">Add to Home Screen</button>
+    <button id="installAppButton" style="display: none;">
+        <i class="fa-solid fa-circle-plus add-icon"></i>
+        <span>Add to Home Screen</span>    
+    </button>
+
     <div class="title">
         <img class="icon" src="https://cdn-icons-png.flaticon.com/512/8669/8669730.png" alt="pusle icon">
         <h1>Pulse Player v1</h1>
@@ -35,7 +40,9 @@
     </div>
     <div class="timestamp-controls">
         <input id="timestamp" type="number" min="0" placeholder="Enter timestamp" />
-        <button id="setTimestamp">Go to timestamp</button>
+        <button id="setTimestamp">
+            <i class="fa-solid fa-circle-right jump-icon"></i>
+        </button>
     </div>
     <div class="player" id="player1">
         <audio preload="metadata" controls>

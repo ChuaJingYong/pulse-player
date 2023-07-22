@@ -1,0 +1,14 @@
+{
+    "name": "Pulse Player",
+    "description": "Progressive Web App that plays your song choice while you exercise.",
+    "icons": [
+      {
+        "src": "/assets/pulse-icon.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ],
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "theme_color":"#06d6a0"
+  }
