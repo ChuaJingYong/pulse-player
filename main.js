@@ -1,5 +1,7 @@
 let currentAudio = null; // reference to the currently playing audio
 const players = Array.from(document.querySelectorAll('.player')); // get all player divs
+currentAudio = players[0].querySelector('audio')
+console.log({currentAudio})
 
 players.forEach(player => {
   const audio = player.querySelector('audio');
@@ -10,7 +12,17 @@ players.forEach(player => {
   audio.ontimeupdate = () => localStorage.setItem(`audioTime${player.id}`, audio.currentTime);
 
   player.onclick = () => {
-      console.log(`current audio now is ${currentAudio} with audio being ${audio}`,Boolean(audio) )
+
+    // Toggle selected player class. If already has 'selected', then return whole function
+    //if(player.classList.contains('selected')) return;
+
+    // Remove 'selected' class from all players
+    players.forEach(p => p.classList.remove('selected'));
+
+    // Add 'selected' class to the clicked player
+    player.classList.add('selected');
+    
+    console.log(`current audio now is ${currentAudio} with audio being ${audio}`,Boolean(audio) )
     if (currentAudio) currentAudio.pause();
     currentAudio = audio;
     audio.play();

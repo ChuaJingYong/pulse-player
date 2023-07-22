@@ -29,7 +29,12 @@ img{
     border: 2px solid #22577a;
     border-radius: 10px;
     padding: 20px;
-    background-color: #57cc99;
+    background-color: #c7f9cc;
+}
+
+.player.selected{
+    background-color: #06d6a0;
+    border: 2px solid #22577a;
 }
 
 audio {
